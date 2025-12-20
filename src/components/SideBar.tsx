@@ -121,8 +121,33 @@ function SideBar({ children }: SideBarProps) {
 
             {!openMain5 && (
               <ul className="ulAuth">
-                <li>ثوابت النظام</li>
-                <li>القوائم</li>
+                <li>
+                  <NavLink to="/goverments">الوزارات</NavLink>
+                </li>
+                 <li>
+                  <NavLink to="/emp-type">أنواع الموظفين</NavLink>
+                </li>
+                 <li>
+                  <NavLink to="/emp-classifications">تصنيفات الموظفين العامة</NavLink>
+                </li>
+                 <li>
+                  <NavLink to="/categories">الفئات</NavLink>
+                </li>
+                 <li>
+                  <NavLink to="/job-scale">السلم الوظيفي</NavLink>
+                </li>
+                 <li>
+                  <NavLink to="/temporary-contrast-employees">الدرجات</NavLink>
+                </li>
+                 <li>
+                  <NavLink to="/temporary-contrast-employees">البرامج</NavLink>
+                </li>
+                 <li>
+                  <NavLink to="/temporary-contrast-employees">الشهادات</NavLink>
+                </li>
+                 <li>
+                  <NavLink to="/temporary-contrast-employees">الدائرة</NavLink>
+                </li>
               </ul>
             )}
           </ul>

@@ -6,10 +6,10 @@ import YearNumber from '../components/YearNumber';
 function OlderEmployees() {
   return (
     <div>
-      <EmployeesHeader title="المتقاعدين" desc="قائمة بأسماء الموظفين النتقاعدين حاليا (قبل هذا الشهر)" onApplyFilters={setFilters}/>
+      <EmployeesHeader title="المتقاعدين" desc="قائمة بأسماء الموظفين النتقاعدين حاليا (قبل هذا الشهر)"/>
       <YearNumber/>
       <EmployeesFilters/>       
-      <EmployeesTable filters={filters} />
+      <EmployeesTable/>
     </div>
   )
 }
