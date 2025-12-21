@@ -72,7 +72,7 @@ function Login() {
                 <Form.Check type="checkbox" label="تذكرني" className='forgetpass'/>
                 <a href="#" className='forgetpass'>هل نسيت كلمة المرور؟</a>
               </div>
-            <NavLink to="/other-government" className="loginButton nav-link w-100 " style={{ textDecoration: 'none' }}>
+            <NavLink to="/other-government" className="loginButton nav-link w-100 text-center" style={{ textDecoration: 'none' }}>
               تسجيل الدخول
               </NavLink>
               {/* <Nav.Link type="submit" as={NavLink} to="/"  >

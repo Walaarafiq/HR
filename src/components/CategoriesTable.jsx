@@ -37,7 +37,7 @@ function CategoriesTable() {
             <thead className="table-light" style={{ fontSize: "14px" }}>
               <tr>
                 <th>م</th>
-                <th>الفئة</th>
+                <th>القيمة</th>
                 <th>عدد الموظفين</th>
                 <th>الإجراءات</th>
               </tr>

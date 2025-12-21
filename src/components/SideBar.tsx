@@ -2,7 +2,8 @@ import { useState } from "react";
 import type { ReactNode } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import { FaSignOutAlt, FaBell, FaAngleDown } from "react-icons/fa";
+import { FaSignOutAlt, FaBell, FaAngleDown,FaUser ,FaFileAlt ,FaHome,FaUserTie,FaCogs ,FaFolderOpen,FaClock 
+  ,FaChalkboardTeacher,FaArchive,FaFileInvoiceDollar  ,FaMoneyCheckAlt, FaTools } from "react-icons/fa";
 import { FaMessage } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 
@@ -21,11 +22,12 @@ function SideBar({ children }: SideBarProps) {
   const [openMain7, setOpenMain7] = useState(true);
   const [openMain8, setOpenMain8] = useState(true);
   const [openMain9, setOpenMain9] = useState(false);
+  const [openMain10, setOpenMain10] = useState(false);
 
   return (
     <div className="main-layout">
 
-      {/* ===== Sidebar ===== */}
+      {/* Sidebar */}
       <div className={`sidebar ${open ? "open" : "closed"}`}>
         <Nav className="flex-column px-3 mt-4">
 
@@ -35,18 +37,38 @@ function SideBar({ children }: SideBarProps) {
           <hr />
 
           {/* الرئيسية */}
-          <label className="LabelSide">الرئيسية</label>
+         <label className="LabelSide">الرئيسية</label>
           <ul className="ulMain">
-            <li>لوحة التحكم</li>
+            <li style={{ paddingRight: "0px" }}>
+              <NavLink
+                to="/dashboard"
+                style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                }}
+                className={({ isActive }) =>
+                  isActive ? "active-link" : ""
+                }>
+                <FaHome style={{marginLeft:"8px"}} />
+                لوحة التحكم
+              </NavLink>
+            </li>
           </ul>
-
           <hr />
 
           {/* شؤون الموظفين */}
-          <label className="LabelSide">إدارة شؤون الموظفين</label>
+          <label className="LabelSide">
+            {/* <FaUser style={{marginLeft:"5px"}}/> */}
+            إدارة شؤون الموظفين
+
+          </label>
 
           <ul>
             <li className="ulMain" onClick={() => setOpenMain2(!openMain2)}>
+              <FaUserTie />
               شؤون الموظفين
               <FaAngleDown />
             </li>
@@ -76,6 +98,7 @@ function SideBar({ children }: SideBarProps) {
 
           <ul>
             <li className="ulMain" onClick={() => setOpenMain3(!openMain3)}>
+              <FaFileAlt style={{marginLeft:'-12px'}} />
               عقود التشغيل
               <FaAngleDown />
             </li>
@@ -97,6 +120,7 @@ function SideBar({ children }: SideBarProps) {
 
           <ul>
             <li className="ulMain" onClick={() => setOpenMain4(!openMain4)}>
+              <FaFileAlt style={{marginLeft:'12px'}} />
               برامج التشغيل المؤقتة
               <FaAngleDown />
             </li>
@@ -115,6 +139,7 @@ function SideBar({ children }: SideBarProps) {
 
           <ul>
             <li className="ulMain" onClick={() => setOpenMain5(!openMain5)}>
+              <FaCogs style={{marginLeft:'-10px'}} />
               الثوابت والقوائم
               <FaAngleDown />
             </li>
@@ -137,16 +162,55 @@ function SideBar({ children }: SideBarProps) {
                   <NavLink to="/job-scale">السلم الوظيفي</NavLink>
                 </li>
                  <li>
-                  <NavLink to="/temporary-contrast-employees">الدرجات</NavLink>
+                  <NavLink to="/degrees">الدرجات</NavLink>
                 </li>
                  <li>
-                  <NavLink to="/temporary-contrast-employees">البرامج</NavLink>
+                  <NavLink to="/programs2">البرامج</NavLink>
                 </li>
                  <li>
-                  <NavLink to="/temporary-contrast-employees">الشهادات</NavLink>
+                  <NavLink to="/certificates">الشهادات</NavLink>
                 </li>
                  <li>
-                  <NavLink to="/temporary-contrast-employees">الدائرة</NavLink>
+                  <NavLink to="/departments">الدائرة</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/job-title">المسمى الوظيفي</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/divisions">الشعبة</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/section">القسم</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/temporary-contrast-employees">الوحدة</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/temporary-contrast-employees">الإدارة العامة</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/temporary-contrast-employees">المكاتب الفرعية</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/temporary-contrast-employees">المعبر</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/temporary-contrast-employees">الحالة الوظيفية</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/temporary-contrast-employees">البنوك</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/temporary-contrast-employees">عقود التشغيل</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/temporary-contrast-employees">وثائق الموظفين</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/temporary-contrast-employees">أنواع الدورات</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/temporary-contrast-employees">تصنيفات الدورات</NavLink>
                 </li>
               </ul>
             )}
@@ -154,6 +218,7 @@ function SideBar({ children }: SideBarProps) {
 
           <ul>
             <li className="ulMain" onClick={() => setOpenMain6(!openMain6)}>
+              <FaFolderOpen style={{marginLeft:"-10px"}} />
               وثائق الموظفين
               <FaAngleDown />
             </li>
@@ -166,25 +231,51 @@ function SideBar({ children }: SideBarProps) {
             )}
           </ul>
 
-          <ul className="ulMain">
-            <li>الحضور والانصراف</li>
+          <ul className="ulMain mt-1">
+            <li>
+              <FaClock style={{marginLeft:"10px"}} />
+              الحضور والانصراف
+
+            </li>
           </ul>
 
-          <ul className="ulMain">
-            <li>التدريب والتطوير</li>
+          <ul className="ulMain mt-3">
+            <li>
+              <FaChalkboardTeacher style={{marginLeft:"10px"}} />
+              التدريب والتطوير
+
+            </li>
           </ul>
 
-          <ul className="ulMain">
-            <li>أرشيف الموظفين</li>
+          <ul className="ulMain mt-3">
+            <li>
+              <FaArchive style={{marginLeft:"10px"}} />
+              أرشيف الموظفين
+              </li>
           </ul>
 
           <hr />
 
           {/* الشؤون المالية */}
           <label className="LabelSide">إدارة الشؤون المالية</label>
+            <ul>  
+            <li className="ulMain mt-3" onClick={() => setOpenMain10(!openMain10)}>
+              <FaFileInvoiceDollar style={{marginLeft:'-8px'}} />
+              المعلومات البنكية
+              <FaAngleDown />
+            </li>
 
-          <ul>
+            {!openMain10 && (
+              <ul className="ulAuth">
+                <li>العلاوات</li>
+                <li>الخصومات</li>
+              </ul>
+            )}
+          </ul>
+
+          <ul>  
             <li className="ulMain" onClick={() => setOpenMain7(!openMain7)}>
+              <FaFileInvoiceDollar style={{marginLeft:'13px'}} />
               العلاوات والخصومات
               <FaAngleDown />
             </li>
@@ -199,6 +290,7 @@ function SideBar({ children }: SideBarProps) {
 
           <ul>
             <li className="ulMain" onClick={() => setOpenMain8(!openMain8)}>
+              <FaMoneyCheckAlt style={{marginLeft:'-18px'}} />
               قسائم الرواتب
               <FaAngleDown />
             </li>
@@ -218,6 +310,7 @@ function SideBar({ children }: SideBarProps) {
 
           <ul>
             <li className="ulMain" onClick={() => setOpenMain9(!openMain9)}>
+              <FaTools style={{marginLeft:"-18px"}}/>
               عمليات النظام
               <FaAngleDown />
             </li>
@@ -255,7 +348,7 @@ function SideBar({ children }: SideBarProps) {
           </div>
 
           <div className="d-flex align-items-center">
-            <FaSignOutAlt className="icons me-3" />
+           <NavLink to="/auth/login"><FaSignOutAlt className="icons me-3" /></NavLink>
             <FaBell className="icons me-3" />
             <FaMessage className="icons me-3" />
 

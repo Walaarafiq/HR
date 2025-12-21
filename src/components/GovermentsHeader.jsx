@@ -1,8 +1,8 @@
 import { useState } from "react";
-import FiltersModalEmp from "./FiltersModalEmp";
+import AddGovermentModal from "./AddGovermentModal";
 
-function GovermentsHeader({ title = "عنوان افتراضي", desc = "وصف", onApplyFilters }) {
-  const [showFilters, setShowFilters] = useState(false);
+function GovermentsHeader({ title = "عنوان افتراضي", desc = "وصف", onAddItem }) {
+  const [showAddModal, setShowAddModal] = useState(false);
 
   return (
     <>
@@ -14,22 +14,21 @@ function GovermentsHeader({ title = "عنوان افتراضي", desc = "وصف"
           <p style={{ fontSize: "14px" }}>{desc}</p>
         </div>
 
-        <div className="d-flex gap-2">
-          <button
-            className="btn btn-dark"
-            style={{ fontSize: "13px", padding: "6px 10px" }}
-          >
-            إضافة قيمة جديدة
-          </button>
-        </div>
+        <button
+          className="btn btn-dark"
+          style={{ fontSize: "13px", padding: "6px 10px" }}
+          onClick={() => setShowAddModal(true)}
+        >
+          إضافة قيمة جديدة
+        </button>
       </div>
 
-      {showFilters && (
-        <FiltersModalEmp
-          onClose={() => setShowFilters(false)}
-          onApply={(filters) => {
-            onApplyFilters(filters);
-            setShowFilters(false);
+      {showAddModal && (
+        <AddGovermentModal
+          onClose={() => setShowAddModal(false)}
+          onSave={(item) => {
+            onAddItem(item);
+            setShowAddModal(false);
           }}
         />
       )}

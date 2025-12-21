@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import EditEmpWizard from "../components/EditEmpWizard";
+import JobScale from "../pages/JobScale";
 
-function GovermentsTable({employees }) {
-//   const initialEmployees = [
-//     { id: 1, GovName: "وزارة الإقتصاد", EmpNum: "974334252"},
-//     { id: 2, GovName: "وزارة الصحة", EmpNum: "974334252"},
-//     { id: 3, GovName: "وزارة العمل", EmpNum: "974334252"},
-//     { id: 4, GovName: "وزارة المالية", EmpNum: "974334252"},
-//     { id: 5, GovName: "وزارة الصحة", EmpNum: "974334252"},
-// ];
+function JobScaleTable() {
+  const initialEmployees = [
+    { id: 1, GovName: "-", EmpNum: "1 موظف"},
+    { id: 2, GovName: "-", EmpNum: "10 موظفين"},
+    { id: 3, GovName: "-", EmpNum: "3 موظفين"},
+];
 
-  // const [employees, setEmployees] = useState(initialEmployees);
+  const [employees, setEmployees] = useState(initialEmployees);
   const [showWizard, setShowWizard] = useState(false);
   const [selectedEmployee, setSelectedEmployee] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -20,14 +19,14 @@ function GovermentsTable({employees }) {
 
   const handlePrev = () => { if(currentPage>1) setCurrentPage(currentPage-1); };
   const handleNext = () => { if(currentPage<totalPages) setCurrentPage(currentPage+1); };
-
-  // دالة الحذف مع التأكيد
   const handleDelete = (empId) => {
     const emp = employees.find(e => e.id === empId);
-    if(window.confirm(`هل أنت متأكد أنك تريد حذف الموظف "${emp.name}"؟`)) {
+    if(window.confirm(`هل أنت متأكد أنك تريد حذف الموظف "${emp.GovName}"؟`)) {
       setEmployees(prev => prev.filter(e => e.id !== empId));
     }
   };
+
+  
 
   return (
     <>
@@ -57,7 +56,6 @@ function GovermentsTable({employees }) {
               ))}
             </tbody>
           </table>
-
           <div className="d-flex justify-content-center align-items-center mt-3">
             <button className="btn btn-outline-dark me-1" onClick={handlePrev} disabled={currentPage === 1}>&lt; السابق</button>
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
@@ -85,4 +83,4 @@ function GovermentsTable({employees }) {
   );
 }
 
-export default GovermentsTable;
+export default JobScaleTable;

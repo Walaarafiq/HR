@@ -197,8 +197,17 @@ html, body {
   width: 0;
   overflow: hidden;
 }
-
-/* المحتوى */
+.cardDashTit{
+  color: #002F6C;
+  font-weight: bold;
+  padding-top: 8px;
+  font-size: 18px;
+}
+.cardDashNum{
+   color: grey;
+  font-weight: 400;
+  padding-top: 8px;
+}
 .content {
   margin-right: 250px;
   flex-grow: 1;

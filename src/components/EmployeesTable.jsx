@@ -100,7 +100,7 @@ function EmployeesTable() {
         }}>
           <div style={{ backgroundColor: "#fff", padding: "20px", borderRadius: "8px", maxWidth: "90%", maxHeight: "100%", overflowY: "auto" }}>
             <EditEmpWizard employee={selectedEmployee} />
-            <button className="btn btn-danger mt-2" onClick={() => setShowWizard(false)}>إغلاق</button>
+            <button className="btn btn-danger mt-2 " onClick={() => setShowWizard(false)}>إغلاق</button>
           </div>
         </div>
       )}
