@@ -29,6 +29,19 @@ import JobTitle from "./pages/JobTitle";
 import Division from "./pages/Division";
 import Section from "./pages/Section";
 import Dashboard from "./pages/Dashboard";
+import Unit from "./components/Unit";
+import GeneralAdministrationTable from "./components/GeneralAdministrationTable";
+import GeneralAdminstration from "./pages/GeneralAdminstration";
+import BranchOffices from "./pages/BranchOffices";
+import Crossing from "./pages/Crossing";
+import EmploymentStatus from "./pages/EmploymentStatus";
+import Bank from "./pages/Bank";
+import WorkContractsTable from "./components/WorkContractsTable";
+import WorkContracts from "./pages/WorkContracts";
+import EmployeeDocuments from "./pages/EmployeeDocuments";
+import CourseTypes from "./pages/CourseTypes";
+import CourseClassifications from "./pages/CourseClassifications";
+import AcademicCertifcates from "./pages/AcademicCertifcates";
 
 const router = createBrowserRouter([
   {
@@ -65,7 +78,19 @@ const router = createBrowserRouter([
       { path: "job-title", element:<JobTitle/>},
       { path: "divisions", element:<Division/>},
       { path: "section", element:<Section/>},
-      { path: "dashboard", element:<Dashboard/>}
+      { path: "dashboard", element:<Dashboard/>},
+      { path: "unit", element:<Unit/>},
+      { path: "general-administration", element:<GeneralAdminstration/>},
+      { path: "branch-offices", element:<BranchOffices/>},
+      { path: "crossing", element:<Crossing/>},
+      { path: "employment-status", element:<EmploymentStatus/>},
+      { path: "bank", element:<Bank/>},
+      { path: "work-contracts", element:<WorkContracts/>},
+      { path: "employee-documents", element:<EmployeeDocuments/>},
+      { path: "course-types", element:<CourseTypes/>},
+      { path: "course-classifications", element:<CourseClassifications/>},
+      { path: "academic-certifcates", element:<AcademicCertifcates/>},
+      { path: "course-classifications", element:<CourseClassifications/>}
     ],
   },
 ]);

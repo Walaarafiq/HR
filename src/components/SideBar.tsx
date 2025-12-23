@@ -183,34 +183,34 @@ function SideBar({ children }: SideBarProps) {
                   <NavLink to="/section">القسم</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/temporary-contrast-employees">الوحدة</NavLink>
+                  <NavLink to="/unit">الوحدة</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/temporary-contrast-employees">الإدارة العامة</NavLink>
+                  <NavLink to="/general-administration">الإدارة العامة</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/temporary-contrast-employees">المكاتب الفرعية</NavLink>
+                  <NavLink to="/branch-offices">المكاتب الفرعية</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/temporary-contrast-employees">المعبر</NavLink>
+                  <NavLink to="/crossing">المعبر</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/temporary-contrast-employees">الحالة الوظيفية</NavLink>
+                  <NavLink to="/employment-status">الحالة الوظيفية</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/temporary-contrast-employees">البنوك</NavLink>
+                  <NavLink to="/bank">البنوك</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/temporary-contrast-employees">عقود التشغيل</NavLink>
+                  <NavLink to="/work-contracts">عقود التشغيل</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/temporary-contrast-employees">وثائق الموظفين</NavLink>
+                  <NavLink to="/employee-documents">وثائق الموظفين</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/temporary-contrast-employees">أنواع الدورات</NavLink>
+                  <NavLink to="/course-types">أنواع الدورات</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/temporary-contrast-employees">تصنيفات الدورات</NavLink>
+                  <NavLink to="/course-classifications">تصنيفات الدورات</NavLink>
                 </li>
               </ul>
             )}
@@ -225,8 +225,12 @@ function SideBar({ children }: SideBarProps) {
 
             {!openMain6 && (
               <ul className="ulAuth">
-                <li>وثائق رسمية</li>
-                <li>وثائق أخرى</li>
+                <li>
+                  <NavLink to="/academic-certifcates">الشهادات الأكاديمية</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/work-contracts">مرفقات إدارية</NavLink>
+                </li>
               </ul>
             )}
           </ul>
