@@ -42,6 +42,10 @@ import EmployeeDocuments from "./pages/EmployeeDocuments";
 import CourseTypes from "./pages/CourseTypes";
 import CourseClassifications from "./pages/CourseClassifications";
 import AcademicCertifcates from "./pages/AcademicCertifcates";
+import AdministrativeAttachments from "./pages/AdministrativeAttachments";
+import AddCertificate from "./components/AddCertificate";
+import AddAttachment from "./components/AddAttachment";
+import AddEmployeesforms from "./components/AddEmployeesforms";
 
 const router = createBrowserRouter([
   {
@@ -90,7 +94,10 @@ const router = createBrowserRouter([
       { path: "course-types", element:<CourseTypes/>},
       { path: "course-classifications", element:<CourseClassifications/>},
       { path: "academic-certifcates", element:<AcademicCertifcates/>},
-      { path: "course-classifications", element:<CourseClassifications/>}
+      { path: "administrative-attachments", element:<AdministrativeAttachments/>},
+      { path: "add-certificate", element: <AddCertificate /> },
+      { path: "add-attach", element: <AddAttachment /> },
+      { path: "/add-employee", element:<AddEmployeesforms/>}
     ],
   },
 ]);

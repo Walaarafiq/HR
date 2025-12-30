@@ -229,7 +229,7 @@ function SideBar({ children }: SideBarProps) {
                   <NavLink to="/academic-certifcates">الشهادات الأكاديمية</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/work-contracts">مرفقات إدارية</NavLink>
+                  <NavLink to="/administrative-attachments">مرفقات إدارية</NavLink>
                 </li>
               </ul>
             )}
@@ -332,7 +332,7 @@ function SideBar({ children }: SideBarProps) {
 
       {/* ===== Content ===== */}
       <div className={`content ${open ? "" : "full"}`}>
-        <Navbar className="bg-body-tertiary navbar px-3 d-flex justify-content-between">
+        <Navbar className=" navbar px-3 d-flex justify-content-between border-bottom" style={{backgroundColor:"#f1f3f5"}}>
 
           <div className="d-flex align-items-center">
             <button className="toggleBtn" onClick={() => setOpen(!open)}>
@@ -363,15 +363,16 @@ function SideBar({ children }: SideBarProps) {
               style={{
                 width: 50,
                 height: 50,
-                borderRadius: "50%",
-              }}
-            />
+                borderRadius: "50%",}}/>
+            
           </div>
+          
         </Navbar>
 
         <div className="p-4">
           {children}
         </div>
+        
       </div>
     </div>
   );

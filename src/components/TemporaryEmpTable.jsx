@@ -15,9 +15,6 @@ function TemporaryEmpTable() {
     { id: 10, name: "علاء عبد الله سليمان قديح", nid: "974334252", phone: "8860386", dob: "1976-08-28",pro:"الألماني", workState: "-", workStartDate: "20-10-2025" },
     { id: 11, name: "علاء عبد الله سليمان قديح", nid: "974334252", phone: "8860386", dob: "1976-08-28",pro:"الألماني", workState: "-", workStartDate: "20-10-2025" },
     { id: 12, name: "علاء عبد الله سليمان قديح", nid: "974334252", phone: "8860386", dob: "1976-08-28",pro:"الألماني", workState: "-", workStartDate: "20-10-2025" },
-
-
-
 ];
 
   const [employees, setEmployees] = useState(initialEmployees);

@@ -2,7 +2,7 @@ import { useState } from "react";
 import FiltersModalEmp from "./FiltersModalEmp";
 import { NavLink } from "react-router-dom";
 
-function AcademicCertifactesHeader({ title = "عنوان افتراضي", desc = "وصف", onApplyFilters }) {
+function AdmenstrativeHeader({ title = "عنوان افتراضي", desc = "وصف", onApplyFilters }) {
   const [showFilters, setShowFilters] = useState(false);
 
   return (
@@ -16,13 +16,13 @@ function AcademicCertifactesHeader({ title = "عنوان افتراضي", desc =
         </div>
 
         <div className="d-flex gap-2">
-         <NavLink to="/add-certificate">
-  <button
-    className="btn btn-dark"
-    style={{ fontSize: "13px", padding: "6px 10px" }}>
-    إضافة شهادة جديدة
-  </button>
-</NavLink>
+         <NavLink to="/add-attach">
+            <button
+                className="btn btn-dark"
+                style={{ fontSize: "13px", padding: "6px 10px" }}>
+                إضافة مرفق
+            </button>
+            </NavLink>
           </div>
           
       </div>
@@ -40,4 +40,4 @@ function AcademicCertifactesHeader({ title = "عنوان افتراضي", desc =
   );
 }
 
-export default AcademicCertifactesHeader;
+export default AdmenstrativeHeader;

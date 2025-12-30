@@ -1,5 +1,7 @@
 import { useState } from "react";
 import FiltersModalEmp from "./FiltersModalEmp";
+import Nav from "react-bootstrap/Nav";
+import { NavLink } from "react-router-dom";
 
 function EmployeesHeader({ title = "عنوان افتراضي", desc = "وصف", onApplyFilters }) {
   const [showFilters, setShowFilters] = useState(false);
@@ -18,17 +20,17 @@ function EmployeesHeader({ title = "عنوان افتراضي", desc = "وصف",
           <button
             className="btn btn-outline-warning"
             style={{ fontSize: "13px", padding: "6px 10px" }}
-            onClick={() => setShowFilters(true)}
-          >
+            onClick={() => setShowFilters(true)}>
             الفلاتر المتقدمة
           </button>
 
-          <button
-            className="btn btn-dark"
-            style={{ fontSize: "13px", padding: "6px 10px" }}
-          >
-            إضافة موظف جديد
-          </button>
+          <NavLink to="/add-employee">
+            <button
+                className="btn btn-dark"
+                style={{ fontSize: "13px", padding: "6px 10px" }}>
+                إضافة موظف جديد
+            </button>
+            </NavLink>
         </div>
       </div>
 

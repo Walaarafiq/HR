@@ -176,14 +176,12 @@ function EditEmpWizard() {
             key={index}
             onClick={() => setActiveStep(index)}
             className={`px-3 py-2 me-2 mb-2 border-bottom ${activeStep === index ? "border-primary fw-bold text-primary" : "border-transparent text-secondary"}`}
-            style={{ cursor: "pointer", minWidth: "200px", textAlign: "center" }}
-          >
+            style={{ cursor: "pointer", minWidth: "200px", textAlign: "center" }}>
             {step.title}
           </div>
         ))}
       </div>
 
-      {/* المحتوى */}
       <div className="p-4 border rounded shadow-sm">{steps[activeStep].content}</div>
 
       {/* أزرار التنقل */}

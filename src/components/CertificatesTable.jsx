@@ -21,7 +21,7 @@ function CertificatesTable() {
   const handleNext = () => { if(currentPage<totalPages) setCurrentPage(currentPage+1); };
   const handleDelete = (empId) => {
     const emp = employees.find(e => e.id === empId);
-    if(window.confirm(`هل أنت متأكد أنك تريد حذف الموظف "${emp.GovName}"؟`)) {
+    if(window.confirm(`هل أنت متأكد أنك تريد حذف  "${emp.GovName}"؟`)) {
       setEmployees(prev => prev.filter(e => e.id !== empId));
     }
   };

@@ -6,7 +6,7 @@ import AcademicCertifcatesTables from '../components/AcademicCertificatesTables'
 function AcademicCertifcates() {
   return (
     <div>
-        <AcademicCertifactesHeader title="قاعدة بيانات الموظفين" desc="يمكنك استعراض بيانات الموظفين والبحث المتقدم عبر الفلاتر التخصصية"/>
+        <AcademicCertifactesHeader title="الشهادات الأكاديمية" desc="يمكنك استعراض بيانات الموظفين والبحث المتقدم عبر الفلاتر التخصصية"/>
         <AcademicCertifactesFilters/>
         <AcademicCertifcatesTables/>
     </div>
