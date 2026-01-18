@@ -10,7 +10,7 @@ function AddAttachment() {
 
   return (
     <div className="card p-3">
-      <h5 className="mb-3">إضافة شهادة</h5>
+      <h5 className="mb-3">إضافة مرفق</h5>
       <div className="row mb-3">
         <div className="col-md-6">
           <label className="form-label">الموظف</label>
@@ -45,7 +45,6 @@ function AddAttachment() {
         </div>
       </div>
 
-      {/* السطر الثاني */}
       <div className="mb-3">
         <label className="form-label">إرفاق الملف</label>
         <input
@@ -57,7 +56,6 @@ function AddAttachment() {
         />
       </div>
 
-      {/* السطر الثالث */}
       <div className="mb-3">
         <label className="form-label">ملاحظات</label>
         <input

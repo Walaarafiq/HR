@@ -1,0 +1,279 @@
+import { useState } from "react";
+import type { ReactNode } from "react";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import { FaSignOutAlt, FaBell, FaAngleDown,FaUser ,FaFileAlt ,FaHome,FaUserTie,FaCogs ,FaFolderOpen,FaClock 
+  ,FaChalkboardTeacher,FaArchive,FaFileInvoiceDollar  ,FaMoneyCheckAlt, FaTools } from "react-icons/fa";
+import { FaMessage } from "react-icons/fa6";
+import { NavLink } from "react-router-dom";
+
+type SideBarProps = {
+  children: ReactNode;
+};
+
+function EmpGateSideBar({ children }: SideBarProps) {
+  const [open, setOpen] = useState(true);
+  return (
+    <div className="main-layout">
+
+      {/* Sidebar */}
+      <div className={`sidebarEmp ${open ? "open" : "closed"}`}>
+        <Nav className="flex-column px-3 mt-4">
+
+          <h5 className="text-center titleOfSide">
+            وزارة الإقتصاد الوطني
+          </h5>
+          <hr />
+
+          {/* الرئيسية */}
+         <label className="LabelSideEmp">الرئيسية</label>
+          <ul className="ulMain">
+            <li style={{ paddingRight: "0px" }}>
+              <NavLink
+                to="/dashboard"
+                style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                }}
+                className={({ isActive }) =>
+                  isActive ? "active-link" : ""
+                }>
+                <FaHome style={{marginLeft:"8px"}} />
+                الصفحة الرئيسية 
+              </NavLink>
+            </li>
+          </ul>
+          <hr />
+
+          {/* خدمات الموظف الذاتية  */}
+          <label className="LabelSideEmp">
+           الخدمات الذاتية
+
+          </label>
+
+          <ul>
+            
+          <li className="ulMain">
+            <NavLink
+                to="/dashboard"
+                style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                }}
+                className={({ isActive }) =>
+                  isActive ? "active-link" : ""
+                }>
+                <FaHome style={{marginLeft:"8px"}} />
+                ملفي الشخصي  
+              </NavLink>
+            </li>
+
+          </ul>
+
+          <ul>
+            <li className="ulMain">
+              <NavLink
+                to="/dashboard"
+                style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                }}
+                className={({ isActive }) =>
+                  isActive ? "active-link" : ""
+                }>
+                <FaHome style={{marginLeft:"8px"}} />
+                قسيمة الراتب   
+              </NavLink>
+            </li>
+          </ul>
+
+          <ul><li className="ulMain">
+              <NavLink
+                to="/dashboard"
+                style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                }}
+                className={({ isActive }) =>
+                  isActive ? "active-link" : ""
+                }>
+                <FaHome style={{marginLeft:"8px"}} />
+                طلب إجازة    
+              </NavLink>
+            </li></ul>
+          <hr/>
+
+             {/* عائلة الموظف  */}
+          <label className="LabelSideEmp">
+           بيانات العائلة 
+          </label>
+
+          <ul>
+            <li className="ulMain">
+              <NavLink
+                to="/dashboard"
+                style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                }}
+                className={({ isActive }) =>
+                  isActive ? "active-link" : ""
+                }>
+                <FaHome style={{marginLeft:"8px"}} />
+                الزوج/الزوجة  
+              </NavLink>
+            </li>
+           
+          </ul>
+
+          <ul>
+            <li className="ulMain">
+              <NavLink
+                to="/dashboard"
+                style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                }}
+                className={({ isActive }) =>
+                  isActive ? "active-link" : ""
+                }>
+                <FaHome style={{marginLeft:"8px"}} />
+                الأبناء  
+              </NavLink>
+            </li>
+          </ul>
+          <ul>
+            <li className="ulMain">
+             <NavLink
+                to="/dashboard"
+                style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                }}
+                className={({ isActive }) =>
+                  isActive ? "active-link" : ""
+                }>
+                <FaHome style={{marginLeft:"8px"}} />
+                المعالون  
+              </NavLink>
+            </li>
+          </ul>
+
+          <hr />
+
+          {/* النظام */}
+          <label className="LabelSideEmp">الحساب</label>
+
+          <ul>
+            <li className="ulMain">
+             <NavLink
+                to="/dashboard"
+                style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                }}
+                className={({ isActive }) =>
+                  isActive ? "active-link" : ""
+                }>
+                <FaHome style={{marginLeft:"8px"}} />
+                تسجيل الخروج  
+              </NavLink>
+            </li>
+
+          </ul>
+
+        </Nav>
+      </div>
+
+      {/* ===== Content ===== */}
+      <div className={`content ${open ? "" : "full"}`}>
+        <Navbar className=" navbar px-3 d-flex justify-content-between border-bottom" style={{backgroundColor:"#f1f3f5"}}>
+
+          <div className="d-flex align-items-center">
+            <button className="toggleBtnEmp" onClick={() => setOpen(!open)}>
+              ☰
+            </button>
+
+            <img
+              src="/images/logo.png"
+              alt="logo"
+              style={{ width: 75, height: 75 }}
+              className="ms-3"
+            />
+              {/* <NavLink to="/add-employee">
+            <button
+                className="btn addEmployee ms-3"
+                style={{ fontSize: "13px", padding: "6px 10px" }}>
+                  أضف موظف جديد
+            </button>
+            </NavLink> */}
+          </div>
+
+          <div className="d-flex align-items-center">
+           <NavLink to="/auth/login">
+            <FaSignOutAlt className="iconsEmp me-3" /></NavLink>
+            <FaBell className="iconsEmp me-3" />
+            <FaMessage className="iconsEmp me-3" />
+
+            <img
+              src="/images/employee-02.jpg"
+              alt="user"
+              className="userImg"
+              style={{
+                width: 50,
+                height: 50,
+                borderRadius: "50%",}}/>
+            
+          </div>
+          
+        </Navbar>
+
+        <div className="p-4">
+          {children}
+        </div>
+        {/* ===== Footer ===== */}
+<footer className="emp-footer mt-5">
+  <div className="footer-links">
+    <span>الخصوصية</span>
+    <span className="divider">|</span>
+    <span>الشروط والأحكام</span>
+    <span className="divider">|</span>
+    <span>التعليمات</span>
+  </div>
+
+  <div className="footer-copy">
+    وزارة الاقتصاد الوطني الفلسطيني
+  </div>
+</footer>
+
+        
+      </div>
+    </div>
+  );
+}
+
+export default EmpGateSideBar;

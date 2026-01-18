@@ -23,6 +23,8 @@ function SideBar({ children }: SideBarProps) {
   const [openMain8, setOpenMain8] = useState(true);
   const [openMain9, setOpenMain9] = useState(false);
   const [openMain10, setOpenMain10] = useState(false);
+  const [openMain11, setOpenMain11] = useState(false);
+  const [openMain12, setOpenMain12] = useState(false);
 
   return (
     <div className="main-layout">
@@ -35,7 +37,27 @@ function SideBar({ children }: SideBarProps) {
             وزارة الإقتصاد الوطني
           </h5>
           <hr />
-
+    <ul className="ulMain">
+            <li style={{ paddingRight: "0px" }}>
+              <NavLink
+                to="/gate2/emp-gate"
+                style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                }}
+                className={({ isActive }) =>
+                  isActive ? "active-link" : ""
+                }>
+                <FaHome style={{marginLeft:"8px"}} />
+                الدخول كموظف 
+              </NavLink>
+            </li>
+            
+          </ul>
+          <hr/>
           {/* الرئيسية */}
          <label className="LabelSide">الرئيسية</label>
           <ul className="ulMain">
@@ -235,20 +257,52 @@ function SideBar({ children }: SideBarProps) {
             )}
           </ul>
 
-          <ul className="ulMain mt-1">
+          {/* <ul className="ulMain mt-1">
             <li>
               <FaClock style={{marginLeft:"10px"}} />
               الحضور والانصراف
 
             </li>
+          </ul> */}
+        <ul>
+            <li className="ulMain" onClick={() => setOpenMain11(!openMain11)}>
+            <FaClock style={{marginLeft:"10px"}} />
+              الحضور والإنصراف 
+              <FaAngleDown />
+            </li>
+
+            {!openMain11 && (
+              <ul className="ulAuth">
+                <li>
+                  <NavLink to="/academic-certifcates">كشف الدورات التدريبية</NavLink>
+                </li>
+                
+              </ul>
+            )}
           </ul>
 
-          <ul className="ulMain mt-3">
+          {/* <ul className="ulMain mt-3">
             <li>
               <FaChalkboardTeacher style={{marginLeft:"10px"}} />
               التدريب والتطوير
 
             </li>
+          </ul> */}
+           <ul>
+            <li className="ulMain" onClick={() => setOpenMain12(!openMain12)}>
+            <FaChalkboardTeacher style={{marginLeft:"10px"}} />
+              التدريب والتطوير  
+              <FaAngleDown />
+            </li>
+
+            {!openMain12 && (
+              <ul className="ulAuth">
+                <li>
+                  <NavLink to="/training">الدورات التدريبية</NavLink>
+                </li>
+                
+              </ul>
+            )}
           </ul>
 
           <ul className="ulMain mt-3">
@@ -346,9 +400,16 @@ function SideBar({ children }: SideBarProps) {
               className="ms-3"
             />
 
-            <button className="addEmployee ms-3">
+            {/* <button className="addEmployee ms-3">
               أضف موظف جديد
+            </button> */}
+              <NavLink to="/add-employee">
+            <button
+                className="btn addEmployee ms-3"
+                style={{ fontSize: "13px", padding: "6px 10px" }}>
+                  أضف موظف جديد
             </button>
+            </NavLink>
           </div>
 
           <div className="d-flex align-items-center">

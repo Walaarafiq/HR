@@ -16,7 +16,7 @@ function AddGovermentModal({ onClose, onSave }) {
         <div className="modal-content">
 
           <div className="modal-header">
-            <h5 className="modal-title">إضافة وزارة جديدة</h5>
+            <h5 className="modal-title">إضافة قيمة جديدة</h5>
             <button className="btn-close mx-2" onClick={onClose}></button>
           </div>
 

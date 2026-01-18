@@ -2,7 +2,7 @@ import React from 'react';
 import JobTitleTable from '../components/JobTitleTable';
 import EmployeesFilters from '../components/EmployeesFilters';
 import CategoriesHeader from "../components/CategoriesHeader";
-import UnitTable from './UnitTable';
+import UnitTable from '../components/UnitTable';
 function Unit() {
   return (
     <div>

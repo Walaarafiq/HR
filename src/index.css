@@ -331,7 +331,7 @@ html, body {
   color: #003366;
   font-size: 14px !important;
   display: flex;
-  width: 150px;
+  width: 130px;
 }
 .cardEmp1{
   /* height: 100px; */
@@ -396,4 +396,313 @@ html, body {
 }
 .form-select{
   font-size: 12px !important;
+}
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  direction: ltr;
+  text-align: left;
+}
+
+
+/* الثاني السايدبار */
+.sidebarEmp {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    #014f56,
+    #016A74,
+    #1b8a95
+  );
+  color: #DADBDD;
+  overflow-y: auto;
+  transition: width 0.3s ease;
+  z-index: 1000;
+  text-shadow: 0 0 3px rgba(218, 219, 221, 0.35);
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+.sidebarEmp.closed {
+  width: 0;
+  overflow: hidden;
+}
+.LabelSideEmp {
+  text-align: right;
+  margin-bottom: 7px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #DADBDD;
+  letter-spacing: 0.3px;
+  text-shadow: 0 0 3px rgba(218, 219, 221, 0.3);
+}
+.iconsEmp{
+  margin-right: 4px;
+  margin-left: 4px;
+  text-align: center;
+  justify-content: center !important;
+  transition: all 0.3s ease;
+  width: 18px;
+  height: 18px;
+  fill: #85899F;
+}
+.iconsEmp:hover{
+  color: grey;
+  transform: translateY(-2px);
+}
+.toggleBtnEmp {
+  border: none;
+  background: transparent;
+  font-size: 25px;
+  cursor: pointer;
+  color: #85899F;
+}
+.cardDashTitEmp{
+  color: #002F6C;
+  font-weight: bold;
+  padding-top: 8px;
+  font-size: 16px;
+}
+.cardDashNumEmp{
+   color: grey;
+  font-size: 14px !important;
+  padding-top: 8px;
+}
+.subtitle{
+  font-size: 12px;
+}
+.section-title {
+  display: flex;
+  align-items: center !important;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #016A74;
+  margin-bottom: 4px;
+  margin-top: -20px;
+}
+
+.section-title1 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #96989C;
+  margin-bottom: 8px;
+}
+.profile-card {
+  border: none;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: all 0.25s ease;
+  height: 350px;
+  padding-top: 10px;
+}
+.profile-card p {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #374151;
+  text-align: center;
+}
+.profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.09);
+}
+.section-icon {
+  font-size: 14px;
+  color: #D4AF37;
+}
+.section-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #016A74,
+    transparent
+  );
+  margin: 10px 0 25px;
+}
+.btn-gradient-teal {
+  background: linear-gradient(
+    to top,
+    #014f56,
+    #016A74,
+    #1b8a95
+  );
+  color: #DADBDD;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(1, 106, 116, 0.35);
+  width: 100%;
+  margin-top: 10px;
+  position: sticky;
+}
+.saveEdits{background: linear-gradient(
+    to top,
+    #014f56,
+    #016A74,
+    #1b8a95
+  );
+  color: #DADBDD;}
+.btn-gradient-teal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(1, 106, 116, 0.45);
+  color: #ffffff;
+}
+
+.btn-gradient-teal:active {
+  transform: scale(0.96);
+}
+.emp-footer {
+  color: #6b7280;
+  border-top: 1px solid #e5e7eb;
+  border-radius: 12px;
+  margin-top: 40px;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.footer-links {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.footer-links span {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footer-links span:hover {
+  color: #016A74;
+}
+
+.footer-links .divider {
+  margin: 0 8px;
+  color: #cbd5e1;
+}
+.footer-copy {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+/** ما يخص صفحة تسجيل دخول الموظف التانية **/
+.login-page {
+  min-height: 100vh;
+  background-image: url("/images/backg.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Cairo", sans-serif;
+}
+/* طبقة شفافة */
+.login-overlay {
+  position: absolute;
+  inset: 0;
+ background: rgba(200, 200, 200, 0.3);
+}
+
+/*  الثاني للموظف الدخولصندوق تسجيل  */
+.login-box {
+  position: relative;
+  background: rgba(255, 255, 255, 0.85); 
+  padding: 35px 30px;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  z-index: 1;
+  backdrop-filter: blur(8px); 
+
+  font-family: 'Tajawal', 'Cairo', sans-serif;
+}
+
+.login-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #014f56;
+  font-size: 30px;
+}
+/* .nn{
+  font-size: 26px;
+  color: #016A74;
+  font-weight: bold;
+} */
+
+.login-subtitle {
+  font-size: 18px;
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+.login-box label {
+  float: right;
+  font-size: 20px !important;
+  margin-bottom: 5px;
+  color: #016A74;
+  font-weight: bold;
+    font-family: 'Tajawal', sans-serif;
+
+}
+
+.login-box .form-control {
+  border-radius: 10px;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.login-box .form-control:focus {
+  border-color: #016a74;
+  box-shadow: 0 0 0 2px rgba(1, 106, 116, 0.2);
+}
+.btn-login {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #dadbdd;
+  background: linear-gradient(
+    to top,
+    #014f56,
+    #016a74,
+    #1b8a95
+  );
+  transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(1, 106, 116, 0.4);
+}
+.sendData{
+  color: #dadbdd;
+  background: linear-gradient(
+    to top,
+    #014f56,
+    #016a74,
+    #1b8a95
+  );
+}
+.alertYellow{
+  color: grey;
+  background-color: rgb(251, 251, 193);
+  padding-top: 14px;
+  padding-bottom: 4px;
+  padding-right: 10px;
+  border-radius: 12px;
 }

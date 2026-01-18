@@ -29,7 +29,7 @@ import JobTitle from "./pages/JobTitle";
 import Division from "./pages/Division";
 import Section from "./pages/Section";
 import Dashboard from "./pages/Dashboard";
-import Unit from "./components/Unit";
+import Unit from "./pages/Unit";
 import GeneralAdministrationTable from "./components/GeneralAdministrationTable";
 import GeneralAdminstration from "./pages/GeneralAdminstration";
 import BranchOffices from "./pages/BranchOffices";
@@ -46,12 +46,26 @@ import AdministrativeAttachments from "./pages/AdministrativeAttachments";
 import AddCertificate from "./components/AddCertificate";
 import AddAttachment from "./components/AddAttachment";
 import AddEmployeesforms from "./components/AddEmployeesforms";
+import TrainingPage from "./pages/TrainingPage";
+import EmpGate from "./pages/EmpGate";
+import EmpDashboard from "./pages/EmpDashboard";
+import AddWifePage from "./pages/AddWifePage";
+import AddChildrenPage from "./pages/AddChildrenPage";
+import AddChildren from "./components/AddChildren";
+import AddHeartPage from "./pages/AddHeartPage";
+import AddEduCertificatePage from "./pages/AddEduCertificatePage";
 
 const router = createBrowserRouter([
   {
     path: "auth",
     children: [
       { path: "login", element: <Login/> },
+    ],
+  },
+   {
+    path: "gate2",
+    children: [
+      { path: "emp-gate", element: <EmpGate/> },
     ],
   },
   ,
@@ -97,9 +111,32 @@ const router = createBrowserRouter([
       { path: "administrative-attachments", element:<AdministrativeAttachments/>},
       { path: "add-certificate", element: <AddCertificate /> },
       { path: "add-attach", element: <AddAttachment /> },
-      { path: "/add-employee", element:<AddEmployeesforms/>}
+      { path: "/add-employee", element:<AddEmployeesforms/>},
+      { path: "/training", element:<TrainingPage/>},
+      
+      // {path: "/emp-gate", element:<EmpGate/>}
     ],
   },
+  {
+    path:"/emp-dashboard",
+    element:<EmpDashboard/>,
+  },
+  {
+    path:"/add-wife",
+    element:<AddWifePage/>,
+  },
+  {
+    path:"/add-children",
+    element:<AddChildrenPage/>,
+  },
+  {
+    path:"/add-heart",
+    element:<AddHeartPage/>,
+  },
+  {
+    path:"/add-edu-certificate",
+    element:<AddEduCertificatePage/>,
+  }
+  
 ]);
-
 export default router;
