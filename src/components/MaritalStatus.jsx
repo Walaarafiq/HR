@@ -3,6 +3,9 @@ import { Card, Row, Col, Form, Button } from "react-bootstrap";
 import { useState } from "react";
 import { Table } from "react-bootstrap";
 import { FaPaperclip } from "react-icons/fa";
+import { FaChild } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
+import { FaUser, FaUserTie } from "react-icons/fa";
 
 function MaritalStatus() {
   const [works, setWorks] = useState(false);
@@ -22,8 +25,10 @@ function MaritalStatus() {
     <div>
       <Row className="g-4 mt-3">
            <Col md={12}>
-             <Card className="p-4 shadow-sm h-100">
-               <h5 className="mb-3 fw-bold text-center">الحالة الإجتماعية للموظف</h5>
+             <Card className="p-4 shadow-sm h-100">            
+        <h5 className="mb-3 fw-bold text-center">
+          <FaHeart style={{ marginLeft: "8px", color: "#016A74" }} />الحالة الإجتماعية للموظف 
+        </h5>
      
                <Form>
                  <Form.Group className="mb-3">
@@ -55,7 +60,9 @@ function MaritalStatus() {
 
                <br>
                </br>
-               <h5 className="mb-3 fw-bold text-center">بيانات الزوج/ة</h5>
+               <h5 className="mb-3 fw-bold text-center">
+                <FaUserTie style={{ marginLeft: "8px", color: "#016A74" }} />
+                بيانات الزوج/ة</h5>
                <Form>
                  <Form.Group className="mb-3">
                    <Form.Label>الاسم كامل</Form.Label>
@@ -87,7 +94,10 @@ function MaritalStatus() {
                         </Form.Group>
                     <br>
                     </br>
-                     <h5 className="mb-3 fw-bold text-center">الأبناء</h5>
+                     <h5 className="mb-3 fw-bold text-center">
+                    <FaChild style={{ marginLeft: "8px", color: "#016A74" }} />
+                    الأبناء
+                  </h5>
 
                      <Table striped bordered hover responsive className="text-center">
                         <thead>
@@ -106,7 +116,9 @@ function MaritalStatus() {
                             </tr>
                             ))}
                         </tbody>
+                         
                         </Table>
+                        <Button variant="success" className="sendData ">إضافة إبن/ة</Button>
 <br></br>
 <Row className="mb-4">
          <h5 className="mb-3 fw-bold text-center">المرفقات</h5>
@@ -137,7 +149,7 @@ function MaritalStatus() {
     </Row>
 
                  <Button variant="success" className="sendData ">حفظ التغييرات</Button>
-                 <Button variant="warning" className="sendData mx-2">إلغاء </Button>
+                 <Button variant="secondary" className=" mx-2">إلغاء </Button>
                </Form>
              </Card>
            </Col>

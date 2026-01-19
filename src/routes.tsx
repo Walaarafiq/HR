@@ -4,6 +4,7 @@ import Login from "./components/Login";
 import SideBar from './components/SideBar';
 import { Routes, Route } from "react-router-dom";
 import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from "react-router-dom";
 import EmployeesPage from './pages/Employess.jsx';
 import OfficialEmployees from './pages/OfficialEmployees.jsx';
 import OfficialsOfAnotherGovernment from './pages/OfficialsOfAnotherGovernment.jsx';
@@ -57,6 +58,7 @@ import AddEduCertificatePage from "./pages/AddEduCertificatePage";
 import ProfilePage from "./pages/ProfilePage";
 import MaritalStatusPage from "./pages/MaritalStatusPage";
 import ResetPasswordEmpPages from "./pages/ResetPasswordEmpPages";
+import SalaryPage from "./pages/SalaryPage";
 
 const router = createBrowserRouter([
   {
@@ -152,6 +154,10 @@ const router = createBrowserRouter([
     path:"/reset-pass",
     element:<ResetPasswordEmpPages/>,
   }
-  
+  ,
+   {
+    path:"/salary",
+    element:<SalaryPage/>,
+  }
 ]);
 export default router;

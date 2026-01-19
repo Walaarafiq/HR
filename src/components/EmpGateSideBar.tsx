@@ -79,7 +79,7 @@ function EmpGateSideBar({ children }: SideBarProps) {
           <ul>
             <li className="ulMain">
               <NavLink
-                to="/dashboard"
+                to="/salary"
                 style={{
                   textDecoration: "none",
                   color: "inherit",
