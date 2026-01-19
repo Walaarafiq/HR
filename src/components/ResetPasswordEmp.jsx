@@ -1,11 +1,19 @@
+// import React from 'react'
+
+// function ResetPasswordEmp() {
+//   return (
+//     <div>ResetPasswordEmp</div>
+//   )
+// }
+
+// export default ResetPasswordEmp;
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { FaIdCard, FaLock } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { NavLink } from "react-router-dom";
 
-function EmpLogin() {
+function ResetPasswordEmp() {
   const navigate = useNavigate();
 
   const [nationalId, setNationalId] = useState("");
@@ -100,10 +108,8 @@ function EmpLogin() {
           backdropFilter: "blur(8px)",
         }}
       >
-        <h5 className="login-title">أهلا بك في بوابة الموظف</h5>
-        <p className="login-subtitle mt-2">
-          الرجاء إدخال بيانات الموظف الرسمية
-        </p>
+        <h6 className="login-title">أهلا بك   </h6>
+        <h5 className="login-subtitle mt-2">نسيت كلمة المرور</h5>
 
         {error && (
           <div
@@ -113,11 +119,11 @@ function EmpLogin() {
             {error}
           </div>
         )}
-
+ <p>قم بادخال رقم الهاتف لارسال كود تعيين كلمة مرور جديدة</p>
         <Form onSubmit={handleLogin}>
           <Form.Group className="mb-3">
             <Form.Label>
-              <FaIdCard style={{ marginLeft: "8px" }} /> إسم المستخدم
+              <FaIdCard style={{ marginLeft: "8px" }} />رقم الهاتف 
             </Form.Label>
             <Form.Control
               type="text"
@@ -127,42 +133,6 @@ function EmpLogin() {
               onChange={(e) => setNationalId(e.target.value)}
             />
           </Form.Group>
-
-          <Form.Group className="mb-3">
-            <Form.Label>
-              <FaLock style={{ marginLeft: "8px" }} /> كلمة المرور
-            </Form.Label>
-            <Form.Control
-              type="password"
-              placeholder="أدخل كلمة المرور"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </Form.Group>
-
-          <div
-            className="d-flex justify-content-between align-items-center mb-4"
-            style={{ fontSize: "14px" }}
-          >
-            <NavLink
-                to="/reset-pass"
-                style={{
-                  textDecoration: "none",
-                  color: "inherit",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "5px",
-                }}
-                className={({ isActive }) =>
-                  isActive ? "active-link" : ""
-                }>
-                 
-                هل نسيت كلمة المرور ؟  
-              </NavLink>
-            <Form.Check type="checkbox" label="تذكرني" />
-           
-          </div>
-
           <Button
             type="submit"
             className="btn-login w-100"
@@ -172,9 +142,8 @@ function EmpLogin() {
               borderRadius: "12px",
               fontWeight: 600,
             }}
-            disabled={loading}
-          >
-            {loading ? "جاري تسجيل الدخول..." : "تسجيل الدخول"}
+            disabled={loading}>
+           إرسال الكود
           </Button>
         </Form>
 
@@ -188,4 +157,4 @@ function EmpLogin() {
   );
 }
 
-export default EmpLogin;
+export default ResetPasswordEmp;

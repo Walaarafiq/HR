@@ -30,7 +30,7 @@ function EmpGateSideBar({ children }: SideBarProps) {
           <ul className="ulMain">
             <li style={{ paddingRight: "0px" }}>
               <NavLink
-                to="/dashboard"
+                to="/emp-dashboard"
                 style={{
                   textDecoration: "none",
                   color: "inherit",
@@ -58,7 +58,7 @@ function EmpGateSideBar({ children }: SideBarProps) {
             
           <li className="ulMain">
             <NavLink
-                to="/dashboard"
+                to="/profile"
                 style={{
                   textDecoration: "none",
                   color: "inherit",
@@ -92,6 +92,25 @@ function EmpGateSideBar({ children }: SideBarProps) {
                 }>
                 <FaHome style={{marginLeft:"8px"}} />
                 قسيمة الراتب   
+              </NavLink>
+            </li>
+          </ul>
+          <ul>
+            <li className="ulMain">
+              <NavLink
+                to="/martial-status"
+                style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                }}
+                className={({ isActive }) =>
+                  isActive ? "active-link" : ""
+                }>
+                <FaHome style={{marginLeft:"8px"}} />
+                الحالة الإجتماعية للموظف    
               </NavLink>
             </li>
           </ul>

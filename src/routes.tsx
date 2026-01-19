@@ -54,6 +54,9 @@ import AddChildrenPage from "./pages/AddChildrenPage";
 import AddChildren from "./components/AddChildren";
 import AddHeartPage from "./pages/AddHeartPage";
 import AddEduCertificatePage from "./pages/AddEduCertificatePage";
+import ProfilePage from "./pages/ProfilePage";
+import MaritalStatusPage from "./pages/MaritalStatusPage";
+import ResetPasswordEmpPages from "./pages/ResetPasswordEmpPages";
 
 const router = createBrowserRouter([
   {
@@ -136,6 +139,18 @@ const router = createBrowserRouter([
   {
     path:"/add-edu-certificate",
     element:<AddEduCertificatePage/>,
+  },
+  {
+    path:"/profile",
+    element:<ProfilePage/>,
+  },
+  {
+    path:"/martial-status",
+    element:<MaritalStatusPage/>,
+  },
+   {
+    path:"/reset-pass",
+    element:<ResetPasswordEmpPages/>,
   }
   
 ]);
