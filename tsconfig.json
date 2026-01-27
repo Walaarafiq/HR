@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
-    "outDir": "build",  // كل JS الناتج يروح هنا
+    "outDir": "build",
     "rootDir": "src",
     "jsx": "react-jsx",
     "allowJs": true,
     "checkJs": false,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true
   },
   "include": ["src"]
 }
