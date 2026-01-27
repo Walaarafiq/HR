@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import EditEmpWizard from "../components/EditEmpWizard";
 import EditEmployeesForm from "../components/EditEmployeesForm";
+import { API_BASE_URL } from "../config/api";
 
 function TemporaryEmpTable() {
   const [employees, setEmployees] = useState([]);
@@ -17,7 +18,7 @@ function TemporaryEmpTable() {
       try {
         const token = localStorage.getItem("token"); // إذا في توكن
         const res = await fetch(
-          "https://darksalmon-anteater-608881.hostingersite.com/api/temp-contract-employees",
+          `${API_BASE_URL}/temp-contract-employees`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }

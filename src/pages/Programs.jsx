@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ProgramHeader from "../components/ProgramHeader";
 import ProgramsTable from "../components/ProgramsTable";
+import { API_BASE_URL } from "../config/api";
 
 function Programs() {
   const [projects, setProjects] = useState([]);
@@ -9,7 +10,7 @@ function Programs() {
     const fetchProjects = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await fetch("https://darksalmon-anteater-608881.hostingersite.com/api/temp-contract-projects", {
+        const res = await fetch(`${API_BASE_URL}/temp-contract-projects`, {
           headers: {
             Authorization: token ? `Bearer ${token}` : "",
           },

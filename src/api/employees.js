@@ -1,4 +1,4 @@
-const BASE_URL = "https://darksalmon-anteater-608881.hostingersite.com/api";
+import { API_BASE_URL as BASE_URL } from "../config/api";
 
 const getToken = () => localStorage.getItem("token");
 

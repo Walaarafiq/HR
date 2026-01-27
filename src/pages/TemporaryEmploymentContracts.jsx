@@ -4,6 +4,7 @@ import EmployeesFilters from '../components/EmployeesFilters';
 import ContrastsTable from '../components/ContrastsTable';
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "../config/api";
 function TemporaryEmploymentContracts() {
    const [employees, setEmployees] = useState([]);
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ function TemporaryEmploymentContracts() {
     const loadEmployees = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await fetch("https://darksalmon-anteater-608881.hostingersite.com/api/employees", {
+        const res = await fetch(`${API_BASE_URL}/employees`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();

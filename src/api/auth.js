@@ -1,4 +1,5 @@
 // import api from "./api";
+import { API_BASE_URL } from "../config/api";
 
 // export const login = (email, password) => {
 //   return api.post("/login", {
@@ -6,7 +7,6 @@
 //     password,
 //   });
 // };
-const API_BASE_URL = "https://darksalmon-anteater-608881.hostingersite.com/api";
 
 export const authFetch = async (url, options = {}) => {
   const token = localStorage.getItem("token");
