@@ -147,8 +147,9 @@ function EmpLogin() {
             <NavLink
                 to="/reset-pass"
                 style={{
+                  fontSize:"16px",
                   textDecoration: "none",
-                  color: "inherit",
+                  color: "grey",
                   display: "flex",
                   alignItems: "center",
                   gap: "5px",
@@ -160,7 +161,6 @@ function EmpLogin() {
                 هل نسيت كلمة المرور ؟  
               </NavLink>
             <Form.Check type="checkbox" label="تذكرني" />
-           
           </div>
 
           <Button

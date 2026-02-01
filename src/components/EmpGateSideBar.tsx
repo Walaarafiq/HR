@@ -142,7 +142,7 @@ function EmpGateSideBar({ children }: SideBarProps) {
           <ul>
             <li className="ulMain">
               <NavLink
-                to="/dashboard"
+                to="/add-wife"
                 style={{
                   textDecoration: "none",
                   color: "inherit",
@@ -163,7 +163,7 @@ function EmpGateSideBar({ children }: SideBarProps) {
           <ul>
             <li className="ulMain">
               <NavLink
-                to="/dashboard"
+                to="/add-children"
                 style={{
                   textDecoration: "none",
                   color: "inherit",
@@ -182,7 +182,7 @@ function EmpGateSideBar({ children }: SideBarProps) {
           <ul>
             <li className="ulMain">
              <NavLink
-                to="/dashboard"
+                to="/add-heart"
                 style={{
                   textDecoration: "none",
                   color: "inherit",
@@ -207,7 +207,7 @@ function EmpGateSideBar({ children }: SideBarProps) {
           <ul>
             <li className="ulMain">
              <NavLink
-                to="/dashboard"
+                to="/emp-dashboard"
                 style={{
                   textDecoration: "none",
                   color: "inherit",

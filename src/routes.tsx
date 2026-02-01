@@ -59,6 +59,8 @@ import ProfilePage from "./pages/ProfilePage";
 import MaritalStatusPage from "./pages/MaritalStatusPage";
 import ResetPasswordEmpPages from "./pages/ResetPasswordEmpPages";
 import SalaryPage from "./pages/SalaryPage";
+import RecoverpassPage from "./pages/RecoverpassPage";
+import OTPInputPage from "./pages/OTPInputPage";
 
 const router = createBrowserRouter([
   {
@@ -158,6 +160,16 @@ const router = createBrowserRouter([
    {
     path:"/salary",
     element:<SalaryPage/>,
+  }
+  ,
+   {
+    path:"/recover-pass",
+    element:<RecoverpassPage/>,
+  }
+  ,
+   {
+    path:"/code-pass",
+    element:<OTPInputPage/>,
   }
 ]);
 export default router;

@@ -5,7 +5,7 @@ import ResetPasswordEmp from '../components/ResetPasswordEmp'
 function ResetPasswordEmpPages() {
   return (
     <div>
-            <ResetPasswordEmp></ResetPasswordEmp>
+        <ResetPasswordEmp></ResetPasswordEmp>
     </div>
   )
 }
