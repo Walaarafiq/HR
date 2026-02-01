@@ -359,9 +359,9 @@ html, body {
   height: 30px;
   width: 260px;
 }
-::placeholder .inputEmpInfo{
+/* ::placeholder .inputEmpInfo{
   color: #f1f3f5;
-}
+} */
 /* .cardBody .blockquote{
   color: grey;
   font-weight: bolder;

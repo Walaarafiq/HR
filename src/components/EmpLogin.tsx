@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import { FaIdCard, FaLock } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import { API_BASE_URL } from "../config/api";
 
 function EmpLogin() {
   const navigate = useNavigate();
@@ -26,7 +27,7 @@ function EmpLogin() {
 
     try {
       const response = await fetch(
-        "https://darksalmon-anteater-608881.hostingersite.com/api/login",
+        `${API_BASE_URL}/login`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

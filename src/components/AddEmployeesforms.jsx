@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { API_BASE_URL } from "../config/api";
 
 const steps = [
   { title: "بيانات الموظف الأساسية", contentKey: "basic" },
@@ -81,7 +82,7 @@ function AddEmployeesforms() {
     });
 
     const token = localStorage.getItem("token");
-    const res = await fetch("https://darksalmon-anteater-608881.hostingersite.com/api/employees", {
+    const res = await fetch(`${API_BASE_URL}/employees`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import EditEmpWizard from "../components/EditEmpWizard";
 import EditEmployeesForm from "../components/EditEmployeesForm";
+import { API_BASE_URL } from "../config/api";
 
 function ContrastsTable({ employees, setEmployees }) {
   // ✅ حماية: تأكيد أن employees Array
@@ -48,7 +49,7 @@ function ContrastsTable({ employees, setEmployees }) {
     try {
       const token = localStorage.getItem("token");
       const res = await fetch(
-        `https://darksalmon-anteater-608881.hostingersite.com/api/employees/${emp.id}`,
+        `${API_BASE_URL}/employees/${emp.id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

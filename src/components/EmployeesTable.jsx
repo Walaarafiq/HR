@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import EditEmpWizard from "../components/EditEmpWizard";
 import EditEmployeesForm from "../components/EditEmployeesForm";
+import { API_BASE_URL } from "../config/api";
 
 function EmployeesTable({ employees, setEmployees }) {
   const [loading, setLoading] = useState(true);
@@ -54,7 +55,7 @@ function EmployeesTable({ employees, setEmployees }) {
     try {
       const token = localStorage.getItem("token");
       const res = await fetch(
-        `https://darksalmon-anteater-608881.hostingersite.com/api/employees/${emp.id}`,
+        `${API_BASE_URL}/employees/${emp.id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }

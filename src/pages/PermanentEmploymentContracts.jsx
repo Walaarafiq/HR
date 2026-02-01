@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import EmployeesHeader from "../components/EmployeesHeader";
 import EmployeesFilters from "../components/EmployeesFilters";
 import ContrastsTable from "../components/ContrastsTable";
+import { API_BASE_URL } from "../config/api";
 
 function PermanentEmploymentContracts() {
   const [employees, setEmployees] = useState([]);
@@ -15,7 +16,7 @@ function PermanentEmploymentContracts() {
         const token = localStorage.getItem("token");
 
         const res = await fetch(
-          "https://darksalmon-anteater-608881.hostingersite.com/api/employees",
+          `${API_BASE_URL}/employees`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

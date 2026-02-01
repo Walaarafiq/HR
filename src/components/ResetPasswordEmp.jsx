@@ -1,11 +1,11 @@
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { FaIdCard, FaLock } from "react-icons/fa";
+import { FaIdCard } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 function ResetPasswordEmp() {
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <div
@@ -20,15 +20,17 @@ const navigate = useNavigate();
         backgroundImage: "url('/images/backg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-      }}>
+      }}
+    >
       <div
         className="login-overlay"
         style={{
           position: "absolute",
           inset: 0,
-           background: "rgba(200, 200, 200, 0.4)",
+          background: "rgba(200, 200, 200, 0.4)",
         }}
       ></div>
+
       <img
         src="/images/logo222.png"
         alt="Logo"
@@ -40,7 +42,8 @@ const navigate = useNavigate();
           height: "220px",
           objectFit: "contain",
           zIndex: 10,
-        }}/>
+        }}
+      />
 
       <div
         className="login-box"
@@ -55,43 +58,49 @@ const navigate = useNavigate();
           textAlign: "center",
           zIndex: 1,
           backdropFilter: "blur(8px)",
-        }}>
-        <h6 className="login-title">أهلا بك   </h6>
+        }}
+      >
+        <h6 className="login-title">أهلا بك</h6>
         <h5 className="login-subtitle mt-2">نسيت كلمة المرور</h5>
 
-          {/* <div
-            className="alert alert-danger"
-            style={{ fontSize: "14px", textAlign: "center" }}>
-          </div> */}
-    <p>قم بادخال رقم الهاتف لارسال كود تعيين كلمة مرور جديدة</p>
+        <p>قم بإدخال رقم الهاتف لإرسال كود تعيين كلمة مرور جديدة</p>
+
         <Form>
           <Form.Group className="mb-3">
             <Form.Label>
-              <FaIdCard style={{ marginLeft: "8px" }} />رقم الهاتف 
+              <FaIdCard style={{ marginLeft: "8px" }} />
+              رقم الهاتف
             </Form.Label>
             <Form.Control
               type="text"
-              placeholder="أدخل رقم الجوال "
+              placeholder="أدخل رقم الجوال"
               maxLength={9}
             />
           </Form.Group>
+
           <Button
-          type="button"
+            type="button"
             className="btn-login w-100"
             onClick={() => navigate("/code-pass")}
             style={{
-              background: "linear-gradient(to top, #014f56, #016A74, #1b8a95)",
+              background:
+                "linear-gradient(to top, #014f56, #016A74, #1b8a95)",
               color: "#dadbdd",
               borderRadius: "12px",
-              fontWeight: "600"}}>
-           إرسال الكود
+              fontWeight: "600",
+            }}
+          >
+            إرسال الكود
           </Button>
         </Form>
 
         <p
           className="text-center mt-4"
-          style={{ fontSize: "14px", color: "grey" }}>
-          جميع الحقوق محفوظة <br></br>لدى وزارة الإقتصاد الوطني الفلسطيني
+          style={{ fontSize: "14px", color: "grey" }}
+        >
+          جميع الحقوق محفوظة
+          <br />
+          لدى وزارة الإقتصاد الوطني الفلسطيني
         </p>
       </div>
     </div>

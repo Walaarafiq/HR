@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { API_BASE_URL } from "../config/api";
 
 const steps = [
   {
@@ -176,7 +177,7 @@ function EditEmployeesForm({ employee, onSave }) {
     try {
       const token = localStorage.getItem("token"); 
       const res = await fetch(
-        `https://darksalmon-anteater-608881.hostingersite.com/api/temp-contract-employees/1`,
+        `${API_BASE_URL}/temp-contract-employees/1`,
         {
           method: "PUT", // أو POST حسب الـ API
           headers: {
